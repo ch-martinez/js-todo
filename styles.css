@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    background-image: radial-gradient(circle at -11.24% 85.36%, #4bbe9a 0, #39bea4 4.55%, #22beae 9.09%, #00bfb8 13.64%, #00bec1 18.18%, #00becb 22.73%, #00bdd3 27.27%, #00bcdb 31.82%, #00bbe3 36.36%, #00b9e9 40.91%, #1db7ee 45.45%, #3cb5f2 50%, #53b2f5 54.55%, #67b0f6 59.09%, #79acf6 63.64%, #8aa9f5 68.18%, #9aa6f2 72.73%, #a9a2ee 77.27%, #b69ee9 81.82%, #c29be3 86.36%, #cd97dc 90.91%, #d794d4 95.45%, #df91cc 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: white;
+    height: 550px;
+    width: 450px;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    
+    box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
+-webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
+-moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
+}
+
+.container_input{
+    display: flex;
+}
+
+.input_text{
+    flex-grow: 2;
+    height: 50px;
+}
+  
+/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.tareas_list{
+    flex-grow: 2;
+    padding: 0;
+    list-style: none;
+}
+
+.tareas_item{
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+}
+
+.item_checkbox{
+ margin-right: 15px;
+}
+
+.item_span{
+    flex-grow: 1;
+}
+
+.container_footer{
+    display: flex;
+}
