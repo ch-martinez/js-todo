@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+:root{
+    --medida: 2.5rem
+}
+
 *{
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
 }
 
 body{
-    /* background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
     background-image: radial-gradient(circle at -11.24% 85.36%, #4bbe9a 0, #39bea4 4.55%, #22beae 9.09%, #00bfb8 13.64%, #00bec1 18.18%, #00becb 22.73%, #00bdd3 27.27%, #00bcdb 31.82%, #00bbe3 36.36%, #00b9e9 40.91%, #1db7ee 45.45%, #3cb5f2 50%, #53b2f5 54.55%, #67b0f6 59.09%, #79acf6 63.64%, #8aa9f5 68.18%, #9aa6f2 72.73%, #a9a2ee 77.27%, #b69ee9 81.82%, #c29be3 86.36%, #cd97dc 90.91%, #d794d4 95.45%, #df91cc 100%);
     height: 100vh;
     display: flex;
@@ -12,40 +18,98 @@ body{
     justify-content: center;
 }
 
+/* Generales */
+
+.btn{
+    cursor: pointer;
+    height: var(--medida);
+    width: var(--medida);
+    border: none;
+    font-size8: 1.5rem;
+    font-weight: 900;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: #45454628;
+}
+
+.btn--add{
+    background-color: #4bbe9a;
+}
+
+.btn--complete{
+    background-color: #f7d17e;
+    border-radius: 0;
+}
+
+.btn--del{
+    background-color: #db4646;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.btn--clear{
+    background-color: #4b8abe;
+    width: 6.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.btn--clear:hover{
+    width: 7rem;
+}
+
 .container{
     background-color: white;
-    height: 550px;
+    height-min: 550px;
     width: 450px;
     border-radius: 5px;
-    padding: 30px;
+    padding: 0px 25px 25px;
     display: flex;
     flex-direction: column;
-    
     box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
--webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
--moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
+    -webkit-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
+    -moz-box-shadow: 0px 0px 23px 1px rgba(0,0,0,0.34);
 }
 
-.container_input{
+/* Campos de entrada */
+.form__entry{
     display: flex;
 }
 
-.input_text{
+.entry__input{
     flex-grow: 2;
-    height: 50px;
+    height: var(--medida);
+    border: 2px rgb(194, 194, 194) solid;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #a3a3a3;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+}
+
+.entry__input:focus{
+    outline: none;
+    border: 2px #4bbe9a solid;
+}
+
+.entry__input:hover{
+    border: 2px #6dd8ab solid;
+    
 }
   
-/* +++++++++++++++++++++++++++++++++++++++++++++++ */
+/* Lista de tareas */
 
-.tareas_list{
+.todo__list{
     flex-grow: 2;
     padding: 0;
     list-style: none;
 }
 
-.tareas_item{
+.todo{
     margin-bottom: 10px;
-    padding: 15px;
+    padding-left: 1rem;
     display: flex;
     align-items: center;
     border-radius: 5px;
@@ -53,14 +117,22 @@ body{
 
 }
 
-.item_checkbox{
- margin-right: 15px;
-}
-
-.item_span{
+.todo__text{
     flex-grow: 1;
 }
 
-.container_footer{
+.todo__text--completed{
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Lista de tareas pendientes */
+
+.container__pending{
     display: flex;
+    align-items: center;
+}
+
+.pending__text{
+    flex-grow: 1;
 }
