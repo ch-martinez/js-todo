@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,27 +9,34 @@
 </head>
 <body>
     <div class="container">
-        <h1>Lista de tareas</h1>
-        <div class="container_input">
-            <input class="input_text" type="text" name="" id="">
-            <button class="btn btn--add">+</button>
-        </div>
-        <ul class="tareas_list">
-            <li class="tareas_item">
-                <input class="item_checkbox" type="checkbox" name="" id="">
-                <span class="item_span">Una tarea a realizar</span>
-                <button class="btn btn--add">x</button>
-            </li>
-            <li class="tareas_item">
-                <input class="item_checkbox" type="checkbox" name="" id="">
-                <span class="item_span">Una tarea a realizar</span>
-                <button class="btn btn--add">x</button>
-            </li>
+        <h1 class="title">Lista de tareas</h1>
+
+        <!-- Ingresar una tarea -->
+        <form id="form__entry" class="form__entry">
+            <input class="entry__input" type="text" name="" id="entry__input" placeholder="Ingrese una tarea..." autofocus>
+            <button id="btn--add" class="btn btn--add" type="submit" role="button">+</button>
+        
+        </form>
+        <!-- Lista de tareas -->
+        <ul id="todo__list" class="todo__list">
         </ul>
-        <div class="container_footer">
-            <span class="item_span">Tienes pendientes 4 tareas</span>
-            <button class="btn btn--clear">Borrar todo</button>
+
+        <!-- Lista de tareas pendientes -->
+        <div class="container__pending">
+            <span id="pending__text" class="pending__text">Tienes pendientes 4 tareas</span>
+            <button id="btn--clear" class="btn btn--clear" role="button">Borrar todo</button>
         </div>
     </div>
+
+    <!-- Template de tarea -->
+    <template id="template">
+        <li id="todo" class="todo">
+            <span id="todo__text" class="todo__text"></span>
+            <button id="btn--complete" class="btn btn--complete" role="button">=</button>
+            <button id="btn--del" class="btn btn--del" role="button">x</button>
+        </li>
+    </template>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
