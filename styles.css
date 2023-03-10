@@ -60,6 +60,10 @@ body{
     width: 7rem;
 }
 
+.btn--hide{
+    display: none;
+}
+
 .container{
     background-color: white;
     height-min: 550px;
@@ -123,7 +127,7 @@ body{
 
 .todo__text--completed{
     text-decoration: line-through;
-    color: gray;
+    color: red;
 }
 
 /* Lista de tareas pendientes */
@@ -135,4 +139,12 @@ body{
 
 .pending__text{
     flex-grow: 1;
+}
+
+.peding__text--emptyTodo{
+    text-align: center;
+    color: white;
+    background-color: #ffcaca;
+    border-radius: 4px;
+    padding: 8px;
 }
